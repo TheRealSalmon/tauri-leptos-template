@@ -1,12 +1,14 @@
+#![allow(non_snake_case)]
+
 mod app;
 
-use app::*;
-use leptos::*;
+use app::App;
 
 fn main() {
     console_error_panic_hook::set_once();
-    mount_to_body(|| {
-        view! {
+
+    leptos::mount_to_body(|| {
+        leptos::view! {
             <App/>
         }
     })
